@@ -24,3 +24,12 @@ pip install pytest-flask
 ```
 pip freeze > requiriments.txt
 ```
+
+## Arquivos Ignorados (Gitignore)
+
+Para garantir a segurança e a limpeza do projeto, configuramos o Git para ignorar arquivos que não devem ser versionados. As principais exclusões são:
+
+- **venv/**: Pasta do ambiente virtual (contém arquivos pesados do sistema e dependências).
+- **data/alunos.db**: Arquivo de banco de dados (evita versionar dados locais).
+- **__pycache__/**: Arquivos temporários gerados pelo Python.
+- **.vscode/**: Configurações personalizadas do editor de código.
