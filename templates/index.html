@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Gestão de Alunos</title>
-</head>
-<body>
-    <h1>{{ titulo_pagina }}</h1>
-    
-    <p>Olá, <strong>{{ nome_usuario }}</strong>!</p>
-    <p>Este dado veio direto do seu código Python (app.py).</p>
-</body>
+{% extends "base.html" %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+<div class="p-5 mb-4 bg-white rounded-3 shadow-sm border">
+    <div class="container-fluid py-5 text-center">
+        <h1 class="display-5 fw-bold text-primary">CADASTRO DE ALUNOS</h1>
+        <p class="fw-light">Utilize este site para cadastrar alunos.</p>
+        <a href="/cadastro" type="button" class="btn btn-outline-primary">Cadastrar</a>
+    </div>
+</div>
+{% endblock %}

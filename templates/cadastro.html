@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %} Cadastro de Aluno {% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-white py-3">
+                <h5 class="card-title mb-0 text-primary">Formulário de Cadastro</h5>
+            </div>
+            <div class="card-body">
+                <form action="/cadastro" method="POST">
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Nome do Aluno</label>
+                        <input type="text" name="nome" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Turma</label>
+                        <input type="text" name="turma" class="form-control">
+                    </div>
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button class="btn btn-primary" type="button">Gravar no BD</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

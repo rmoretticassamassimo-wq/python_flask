@@ -1,22 +1,17 @@
-# Importa o Flask e a função de renderizar templates
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'TROCAR_SENHA'
 
-# Rota principal chamando o arquivo HTML
-from flask import Flask, render_template
-
-app = Flask(__name__)
-app.config['SECRET_KEY'] = 'TROCAR_SENHA'
-
-@app.route('/')
+@app.route('/') # Rota para o Index
 def index():
-    titulo = "Painel de Controle"
-    usuario_logado = "Raphael" 
-    return render_template('index.html', titulo_pagina=titulo, nome_usuario=usuario_logado)
+    return render_template('index.html')
 
-# É ESTA PARTE AQUI QUE LIGA O SERVIDOR!
-# Tem que ter os dois "anderlines" (__) de cada lado da palavra
+@app.route('/cadastro', methods=['GET', 'POST']) # Rota para o Cadastro
+def cadastro():
+    if request.method == 'POST':
+        # Aqui pegaremos os dados do formulário depois
+        pass
+    return render_template('cadastro.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
